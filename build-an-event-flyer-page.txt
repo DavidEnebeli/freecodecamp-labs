@@ -1,0 +1,63 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build an Event Flyer Page</title>
+  <link rel="stylesheet"href="styles.css">
+</head>
+
+<body>
+  <header>
+   <img src="https://media.istockphoto.com/id/1372155267/vector/happy-mothers-day-lettering-with-a-heart-and-flowers-handmade-calligraphy-vector.jpg?s=612x612&w=0&k=20&c=934OzLlkrPnYcpFUrO4Sb-BJJLEGLXkj8vZt_qYdpF4="alt="mother's day logo"></>
+    <h1>Mother's Day Celebration</h1>
+  </header>
+  <main>  
+      <section>
+        <h2>Event highlight</h2>
+        <ul>
+          <li>Mother's Talk Show</>
+          <li>Live music</li>
+          <li>Food and Drinks</li>
+          <li>Gift Presentation</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Location and Time</h2>
+        <p><strong>When:</strong> May 12th 2025</p>
+        <p><strong>Where:</strong> RCCG Power House Parish.</p>
+      </section>
+      <hr>
+  </main>
+
+</body>
+
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  padding-top:50px;
+  padding-bottom:50px;
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:auto;
+  margin-right:auto;
+  width:100vw;
+  min-height: calc(100vh - 100px);
+}
+section{
+  width:80%;
+  margin:0 auto;
+}
+hr{
+  width:90%
+}
+
+** end of undefined **
+
