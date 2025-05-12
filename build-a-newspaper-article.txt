@@ -1,0 +1,70 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Article</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <div class="newspaper">
+      <div class="name">DAILY CHUCKLES</div>
+      <div class="date">May 11, 2025</div>
+      <div class="headline">Breaking:AI learns to laugh</div>
+      <div class="sub-headline">Scientists Surprised by Unexpected Humor in Chatbots</div>
+      <div class="author">BY DAVID ENEBELI</div>
+      <p class="text">In a stunning twist, researchers discovered that an advanced AI system developed a sense of humor overnight.</p>
+      <p class="text">The first joke it cracked made scientists laugh for hours, prompting further studies into emotional intelligence in machines.</p>
+    </div>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+html{
+  font-size:24px;
+}
+.newspaper{
+  font-size:16px;
+  font-family:'Open Sans',sans-serif;
+}
+.name{
+  font-size:2rem;
+  font-family:"Times New Roman",serif;
+  text-transform:uppercase;
+}
+.name .author{
+  text-transform:uppercase;
+}
+.headline{
+  font-size:2em;
+  font-weight:bold;
+  margin:1rem 0;
+}
+.sub-headline{
+  font-weight:100;
+  font-size:1.5em;
+  font-style:italic;
+  margin-bottom:1rem;
+}
+.author{
+  font-weight:bold;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+}
+.text{
+  text-indent:20px;
+  line-height:2em;
+  margin-bottom:1rem;
+}
+.text::first-letter{
+  font-weight:bold;
+  font-size:2em;
+}
+
+** end of styles.css **
+
