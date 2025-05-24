@@ -1,0 +1,171 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+     <!-- Navbar -->
+  <nav id="navbar">
+    <header>Python Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Syntax">Syntax</a>
+    <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#Data_Types">Data Types</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Python is a popular high-level programming language known for its simplicity and readability.</p>
+      <p>It is used in web development, data science, scripting, automation, and more.</p>
+      <code>print("Hello, World!")</code>
+      <ul>
+        <li>Beginner friendly</li>
+        <li>Cross-platform</li>
+        <li>Open source</li>
+        <li>Dynamic typing</li>
+        <li>Extensive libraries</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Syntax">
+      <header>Syntax</header>
+      <p>Python uses indentation to define blocks of code.</p>
+      <p>Colons are used after control statements and function headers.</p>
+      <code>if x > 0:
+  print("Positive")</code>
+      <code>def greet():
+  print("Hello")</code>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables in Python are dynamically typed.</p>
+      <p>No need to declare variable types explicitly.</p>
+      <code>x = 10</code>
+      <code>name = "Alice"</code>
+      <code>is_valid = True</code>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+      <header>Data Types</header>
+      <p>Python has several built-in data types.</p>
+      <p>These include numeric, string, list, tuple, set, dict, and boolean.</p>
+      <code>age = 25</code>
+      <code>colors = ["red", "green", "blue"]</code>
+      <code>info = {"name": "Bob", "age": 30}</code>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions in Python are defined using the <code>def</code> keyword.</p>
+      <p>You can pass arguments and return values from functions.</p>
+      <code>def add(a, b):
+  return a + b</code>
+      <code>result = add(2, 3)</code>
+    </section>
+  </main>
+  
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #navbar {
+      background-color: #f5f5f5;
+      border-right: 1px solid #ccc;
+      padding: 1rem;
+      width: 250px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    #navbar header {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .nav-link {
+      display: block;
+      margin: 0.5rem 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    #main-doc {
+      margin-left: 270px;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+
+    .main-section {
+      margin-bottom: 3rem;
+    }
+
+    .main-section header {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      display: block;
+      margin: 0.5rem 0;
+      border-left: 3px solid #ccc;
+      white-space: pre-wrap;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #main-doc {
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
+
+** end of styles.css **
+
