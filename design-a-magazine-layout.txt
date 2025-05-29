@@ -1,0 +1,248 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Magazine Layout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="magazine-cover">
+    <header class="title">
+      <h1>Adventure Awaits</h1>
+      <section class="feature-article">
+        <h2>Top 10 Exotic Destinations for 2024</h2>
+        <p>Discover the most breathtaking places...</p>
+      </section>
+      <section class="small-article1">
+        <h3>Gear Up: Must-Have Gadgets</h3>
+        <p>Check out the latest tech and gear...</p>
+      </section>
+      <section class="small-article2">
+        <h3>Meet the Explorers</h3>
+        <p>Get to know the modern adventurers...</p>
+      </section>
+      <section class="cover-image">
+         <img src="https://images.unsplash.com/photo-1723221045552-eb650c22882c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW5zJTIwc3Vuc2V0fGVufDB8fDB8fHww" alt="Sunset mountain view">
+      </section>
+    </header>
+  </main>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Baskervville, serif;
+    color:  rgb(20, 30, 40);
+    background-color: linen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Anton, sans-serif;
+    font-size: 4rem;
+    color: rgb(20, 30, 40);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
+}
+
+p {
+    font-size: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+.magazine-cover {
+    position: relative;
+    margin: 2rem 2rem;
+    padding: 1.5rem;
+    width: 80%;
+    max-height: 80vh;
+    background-color: white;
+    border-radius: 2%;
+    box-shadow: 5px 5px 50px 10px rgb(173, 161, 148);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+    "title title title" "feature-article feature-article cover-image" "small-article1 small-article2 cover-image";
+}
+
+
+section[class*="article"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    background: linear-gradient(to bottom, #ebebeb, #f9f9f9);
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+    grid-area: title;
+}
+
+.feature-article {
+    grid-area: feature-article;
+    background: linear-gradient(to bottom, rgb(233, 228, 223), #f9f9f9) !important;
+}
+
+.small-article1 {
+    grid-area: small-article1;
+}
+
+.small-article2 {
+    grid-area: small-article2;
+}
+
+.cover-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    grid-area: cover-image;
+    background: linear-gradient(to bottom, #ebebeb, #f9f9f9);
+}
+
+img {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    h2 {
+        font-size: 1.8rem;}
+
+    p {
+        font-size: 1.4rem;}
+
+        section[class*="article"] {
+            gap: 1rem;}
+
+    .magazine-cover {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr auto-fill;
+    }
+    .feature-article, .cover-image {
+        grid-column: 1/-1;
+    }
+
+    .small-article1 {
+        grid-column: 1;
+    }
+
+    .small-article2 {
+        grid-column: 2;
+    }
+
+    .cover-image {
+        display: block;
+        max-height: 60%;
+        grid-row: 4 / -1;
+    }
+
+    img {
+        top: 0;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;}
+
+    p {
+        font-size: 1.3rem;}
+
+        section[class*="article"] {
+            gap: 0.5rem;}
+
+    .magazine-cover {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, 1fr) auto-fill;
+    }
+    .title, .feature-article, .cover-image, .small-article1, .small-article2 {
+        grid-column: 1;
+    }
+
+    .small-article2 {
+        grid-row: 4;
+    }
+
+    .cover-image {
+        grid-row: 5;
+    }
+
+    img {
+        top: 0;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+    overflow-x: scroll;
+    justify-content: left;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    h2 {
+        font-size: 3rem;}
+    p {
+        font-size: 1.8rem;}
+
+    .magazine-cover {
+        max-width: 900px;
+    }
+}
+
+** end of styles.css **
+
