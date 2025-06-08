@@ -1,0 +1,22 @@
+** start of script.js **
+
+console.log("Hello! I'm your coding fun fact guide!");
+let botName;
+let botLocation;
+let favoriteLanguage
+botName = ("David");
+botLocation = ("United States");
+favoriteLanguage = ("Javascript");
+console.log("My name is "+ botName + " and I live on "+ botLocation + ".");
+console.log ("My favorite programming language is " + favoriteLanguage + ".");
+let codingFact;
+codingFact = (favoriteLanguage + " was created in just 10 days by Brendan Eich in 1995!");
+console.log(codingFact);
+codingFact = (favoriteLanguage + " can run both in the browser and on servers—thanks to environments like Node.js!");
+console.log(codingFact);
+codingFact = (favoriteLanguage + " lets you write code like [] + [] and it returns an empty string—because arrays turn into strings during addition!");
+console.log(codingFact);
+console.log("It was fun sharing these facts with you. Goodbye! - " + botName + " from " +  botLocation + ".");
+
+** end of script.js **
+
