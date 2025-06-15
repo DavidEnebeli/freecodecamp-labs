@@ -1,0 +1,20 @@
+** start of script.js **
+
+function maskEmail(email){
+  const atIndex = email.indexOf("@");
+  const username = email.slice(0,atIndex);
+  const domain = email.slice(atIndex);
+  if (username <= 2){
+    return username + domain;
+  }
+  const firstchar = username[0];
+  const lastchar = username[username.length -1];
+  const stars = "*".repeat(username.length - 2);
+  return firstchar + stars + lastchar + domain;
+}
+const email = "freecodecamp@example.com";
+console.log(maskEmail(email));
+
+
+** end of script.js **
+
