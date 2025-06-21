@@ -1,0 +1,27 @@
+** start of script.js **
+
+function pyramid(str,int,bool) {
+  let result = '\n';
+
+  if (!bool) {
+    // Upward pyramid
+    for (let i = 0; i < int; i++) {
+      let spaces = ' '.repeat(int - i - 1);
+      let chars = str.repeat(2 * i + 1);
+      result += spaces + chars + '\n';
+    }
+  } else {
+    // Downward pyramid
+    for (let i = int - 1; i >= 0; i--) {
+      let spaces = ' '.repeat(int - i - 1);
+      let chars = str.repeat(2 * i + 1);
+      result += spaces + chars + '\n';
+    }
+  }
+
+  return result;
+}
+
+
+** end of script.js **
+
