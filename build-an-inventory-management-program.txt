@@ -1,0 +1,53 @@
+** start of script.js **
+
+let inventory = [];
+
+// 2. Function to find product index by name (case-insensitive)
+function findProductIndex(name) {
+  name = name.toLowerCase();
+  return inventory.findIndex(item => item.name === name);
+}
+
+// 3. Function to add or update a product
+function addProduct(product) {
+  const name = product.name.toLowerCase();
+  const index = findProductIndex(name);
+
+  if (index !== -1) {
+    // Update existing quantity
+    inventory[index].quantity += product.quantity;
+    console.log(`${name} quantity updated`);
+  } else {
+    // Add new product
+    inventory.push({ name, quantity: product.quantity });
+    console.log(`${name} added to inventory`);
+  }
+}
+
+// 4. Function to remove quantity or product
+function removeProduct(name, quantity) {
+  name = name.toLowerCase();
+  const index = findProductIndex(name);
+
+  if (index === -1) {
+    console.log(`${name} not found`);
+    return;
+  }
+
+  const product = inventory[index];
+
+  if (product.quantity < quantity) {
+    console.log(`Not enough ${name} available, remaining pieces: ${product.quantity}`);
+  } else {
+    product.quantity -= quantity;
+
+    if (product.quantity === 0) {
+      inventory.splice(index, 1); // Remove product completely
+    }
+
+    console.log(`Remaining ${name} pieces: ${product.quantity}`);
+  }
+}
+
+** end of script.js **
+
