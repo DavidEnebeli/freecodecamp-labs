@@ -1,0 +1,31 @@
+** start of script.js **
+
+let books = [
+  {
+    title: "How to win friends and influence people",
+    authorName: "Dale Carnegie",
+    releaseYear: 1936,
+  },
+  {
+    title: "The power of now",
+    authorName: "Eckhart Tolle",
+    releaseYear: 1997
+  },
+  {
+    title: "Relentless",
+    authorName: "Tim Grover",
+    releaseYear: 2013
+  }
+];
+
+function sortByYear(book1, book2) {
+  if (book1.releaseYear < book2.releaseYear) return -1;
+  if (book1.releaseYear > book2.releaseYear) return 1;
+  return 0;
+}
+
+let filteredBooks = books.filter(book => book.releaseYear > 1950);
+filteredBooks.sort(sortByYear);
+
+** end of script.js **
+
